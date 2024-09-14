@@ -16,10 +16,10 @@ const removeDuplicates = (nums) => {
     for(let i=1; i < nums.length; i++ ){
         // i = 1: nums[1] = 0 (duplicate), do nothing.
         if(nums[i] !== nums[k]){ // i = 2: nums[2] = 1 (new unique element):
-            // assign a new unique value
-            nums[i] = nums[k];
             // increment k
             k++;
+            // assign a new unique value
+            nums[k] = nums[i];
        }
     }   
     // After completion, the first k + 1 elements in nums are the unique elements.
